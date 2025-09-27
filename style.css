@@ -43,6 +43,11 @@ body {
     line-height: 1.6;
 }
 
+footer {
+    text-align: center;
+    padding: 12px;
+}
+
 ul {
     list-style-type: none; 
     margin: 0; 
@@ -55,6 +60,8 @@ a {
 
 h1, h2, h3 {
     font-weight: normal;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-header {
@@ -63,10 +70,27 @@ h1, h2, h3 {
     align-items: center;
     background-color: transparent;
     z-index: 4504;
+    padding: 0 12px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    justify-content: center;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    justify-content: center;
 }
 
 .logo {
     text-align: center;
+
 }
 
 .description {
@@ -76,6 +100,8 @@ h1, h2, h3 {
 .cards {
     display: flex;
     gap: 12px;
+    margin-top: 12px;
+    padding: 12px;
 }
 
 .card-box {
@@ -89,6 +115,8 @@ h1, h2, h3 {
 .card-box:hover{
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
     -10px -10px 10px white;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .media {
@@ -98,4 +126,5 @@ h1, h2, h3 {
 }
 .btn {
     margin-top: auto;
+    padding: 8px;
 }
