@@ -129,7 +129,7 @@ h1, h2, h3 {
 .butn {
     margin-top: auto;
     padding: 8px;
-    background-color: black;
+    background-color: lightslategray;
     color: white;
     text-align: center;
     border: none;
@@ -138,5 +138,19 @@ h1, h2, h3 {
 }
 
 .butn:hover {
-    background-color: darkgrey;
+    background-color: lightslateblue;
 }
+
+.footer-link {
+    color: darkgrey;
+    text-decoration: none;
+    padding: 4px 8px;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    background-color: lightslateblue;
+    color: white;
+    border-radius: 4px;
+}
+
