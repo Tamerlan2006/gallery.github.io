@@ -7,7 +7,7 @@
         "nav main"
         ". foot";
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 200% 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 10px;
 }
 
@@ -90,14 +90,34 @@ h1, h2, h3 {
     z-index: 4504;
 }
 
-.logo {
+.main-header {
+    margin-top: 12px;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+}
+
+.main-headers-background {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.main-headers-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+/* .logo {
     text-align: center;
 }
 
 .description {
     text-align: center;
     margin-top: 12px;
-}
+} */
 
 .cards {
     display: flex;
@@ -119,6 +139,14 @@ h1, h2, h3 {
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
     -10px -10px 10px white;
     transition: 0.3s;
+}
+
+.card-images {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    
 }
 
 .media {
