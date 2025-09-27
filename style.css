@@ -29,15 +29,50 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    }
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: -100px;
+    perspective: 1000px;
+}
 
-    .gallery img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+.gallery-item {
+    width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.4s ease, z-index 0.4s ease;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: translateY(-20px) scale(1.1) rotateY(0deg);
+    z-index: 10;
+}
+
+.gallery-item:hover ~ .gallery-item {
+    transform: translateX(40px) scale(0.85) rotateY(-10deg);
+    z-index: 0;
+}
+
+.gallery:hover .gallery-item:not(:hover) {
+    transform: translateX(-40px) scale(0.85) rotateY(10deg);
+    z-index: 0;
+} 
+
+
+
+
+
+
 
 
 html {
@@ -100,7 +135,6 @@ h1, h2, h3 {
 }
 
 .sidebar {
-    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 12px;
