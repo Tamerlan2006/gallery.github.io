@@ -87,6 +87,11 @@ h1, h2, h3 {
     padding: 0 12px;
 }
 
+.menu-button {
+    cursor: pointer;
+    user-select: none;
+}
+
 .nav-links {
     display: flex;
     gap: 12px;
@@ -95,12 +100,30 @@ h1, h2, h3 {
 }
 
 .sidebar {
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 12px;
     align-items: baseline;
-    z-index: 4504;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: darkgrey;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    transform: translateX(0);
 }
 
 .main-header {
@@ -123,14 +146,6 @@ h1, h2, h3 {
     transform: translate(-50%, -50%);
     color: white;
 }
-/* .logo {
-    text-align: center;
-}
-
-.description {
-    text-align: center;
-    margin-top: 12px;
-} */
 
 .cards {
     display: flex;
@@ -180,6 +195,12 @@ h1, h2, h3 {
 
 .butn:hover {
     background-color: lightslateblue;
+}
+
+.gallery-header {
+    margin-top: 12px;
+    padding: 12px;
+    text-align: center;
 }
 
 .footer-link {
