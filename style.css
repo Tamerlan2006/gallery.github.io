@@ -27,6 +27,19 @@
     grid-area: foot;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    }
+
+    .gallery img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
 html {
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
@@ -146,7 +159,7 @@ h1, h2, h3 {
     height: 100px;
     object-fit: cover;
     margin-bottom: 8px;
-    
+
 }
 
 .media {
