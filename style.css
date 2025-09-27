@@ -6,24 +6,24 @@
         "head head"
         "nav main"
         ". foot";
-    grid-template-rows: 50px 1fr 30px;
-    grid-template-columns: 100% auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200% 1fr;
     gap: 10px;
 }
 
-#page > header {
+#page1 > header {
     grid-area: head;
 }
 
-#page > nav {
+#page1 > nav {
     grid-area: nav;
 }
 
-#page > main {
+#page1 > main {
     grid-area: main;
 }
 
-#page > footer {
+#page1 > footer {
     grid-area: foot;
 }
 
@@ -56,6 +56,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 h1, h2, h3 {
@@ -85,20 +86,22 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 12px;
     padding: 12px;
-    justify-content: center;
+    align-items: baseline;
+    z-index: 4504;
 }
 
 .logo {
     text-align: center;
-
 }
 
 .description {
     text-align: center;
+    margin-top: 12px;
 }
 
 .cards {
     display: flex;
+    align-items: baseline;
     gap: 12px;
     margin-top: 12px;
     padding: 12px;
@@ -116,7 +119,6 @@ h1, h2, h3 {
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
     -10px -10px 10px white;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .media {
@@ -124,7 +126,17 @@ h1, h2, h3 {
     background: #ddd;
     margin-bottom: 8px;
 }
-.btn {
+.butn {
     margin-top: auto;
     padding: 8px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.butn:hover {
+    background-color: darkgrey;
 }
